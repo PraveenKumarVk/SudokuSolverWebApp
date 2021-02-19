@@ -6,125 +6,51 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
     <title>Sudoku Solver</title>
     <script type="text/javascript" src="sudoku.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <div class="shadow-lg p-3 mb-5 bg-body rounded head">
-        <h1 class="display-1">Sudoku Solver</h1>
-        <small class="text-muted">This Solves 9*9 sudoku</small>
-    </div>
-
-    <div class="contain">
-    <div id="gridArea">
-        <p class="shadow-lg p-3 mb-5 bg-body rounded para">
-        <input type="text" id="00" name="00" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="01" name="01" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="02" name="02" autocomplete="off" maxlength="1" class="top left">
-        <input type="text" id="03" name="03" autocomplete="off" maxlength="1" class="top right">
-        <input type="text" id="04" name="04" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="05" name="05" autocomplete="off" maxlength="1" class="top left">
-        <input type="text" id="06" name="06" autocomplete="off" maxlength="1" class="top right">
-        <input type="text" id="07" name="07" autocomplete="off" maxlength="1" class="top ">
-        <input type="text" id="08" name="08" autocomplete="off" maxlength="1" class="top">
-        <br>
-        <input type="text" id="10" name="10" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="11" name="11" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="12" name="12" autocomplete="off" maxlength="1" class="top left">
-        <input type="text" id="13" name="13" autocomplete="off" maxlength="1" class="top right">
-        <input type="text" id="14" name="14" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="15" name="15" autocomplete="off" maxlength="1" class="top left">
-        <input type="text" id="16" name="16" autocomplete="off" maxlength="1" class="top right">
-        <input type="text" id="17" name="17" autocomplete="off" maxlength="1" class="top ">
-        <input type="text" id="18" name="18" autocomplete="off" maxlength="1" class="top">
-        <br>
-        <input type="text" id="20" name="20" autocomplete="off" maxlength="1" class="top bottom">
-        <input type="text" id="21" name="21" autocomplete="off" maxlength="1" class="top bottom">
-        <input type="text" id="22" name="22" autocomplete="off" maxlength="1" class="top left bottom">
-        <input type="text" id="23" name="23" autocomplete="off" maxlength="1" class="top right bottom">
-        <input type="text" id="24" name="24" autocomplete="off" maxlength="1" class="top bottom">
-        <input type="text" id="25" name="25" autocomplete="off" maxlength="1" class="top left bottom">
-        <input type="text" id="26" name="26" autocomplete="off" maxlength="1" class="top right bottom">
-        <input type="text" id="27" name="27" autocomplete="off" maxlength="1" class="top bottom">
-        <input type="text" id="28" name="28" autocomplete="off" maxlength="1" class="top bottom">
-        <br>
-
-        <input type="text" id="30" name="30" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="31" name="31" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="32" name="32" autocomplete="off" maxlength="1" class="top left">
-        <input type="text" id="33" name="33" autocomplete="off" maxlength="1" class="top right">
-        <input type="text" id="34" name="34" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="35" name="35" autocomplete="off" maxlength="1" class="top left">
-        <input type="text" id="36" name="36" autocomplete="off" maxlength="1" class="top right">
-        <input type="text" id="37" name="37" autocomplete="off" maxlength="1" class="top ">
-        <input type="text" id="38" name="38" autocomplete="off" maxlength="1" class="top">
-        <br>
-        <input type="text" id="40" name="40" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="41" name="41" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="42" name="42" autocomplete="off" maxlength="1" class="top left">
-        <input type="text" id="43" name="43" autocomplete="off" maxlength="1" class="top right">
-        <input type="text" id="44" name="44" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="45" name="45" autocomplete="off" maxlength="1" class="top left">
-        <input type="text" id="46" name="46" autocomplete="off" maxlength="1" class="top right">
-        <input type="text" id="47" name="47" autocomplete="off" maxlength="1" class="top ">
-        <input type="text" id="48" name="48" autocomplete="off" maxlength="1" class="top">
-        <br>
-        <input type="text" id="50" name="50" autocomplete="off" maxlength="1" class="top bottom">
-        <input type="text" id="51" name="51" autocomplete="off" maxlength="1" class="top bottom">
-        <input type="text" id="52" name="52" autocomplete="off" maxlength="1" class="top left bottom">
-        <input type="text" id="53" name="53" autocomplete="off" maxlength="1" class="top right bottom">
-        <input type="text" id="54" name="54" autocomplete="off" maxlength="1" class="top bottom">
-        <input type="text" id="55" name="55" autocomplete="off" maxlength="1" class="top left bottom">
-        <input type="text" id="56" name="56" autocomplete="off" maxlength="1" class="top right bottom">
-        <input type="text" id="57" name="57" autocomplete="off" maxlength="1" class="top bottom">
-        <input type="text" id="58" name="58" autocomplete="off" maxlength="1" class="top bottom">
-        <br>
-        <input type="text" id="60" name="60" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="61" name="61" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="62" name="62" autocomplete="off" maxlength="1" class="top left">
-        <input type="text" id="63" name="63" autocomplete="off" maxlength="1" class="top right">
-        <input type="text" id="64" name="64" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="65" name="65" autocomplete="off" maxlength="1" class="top left">
-        <input type="text" id="66" name="66" autocomplete="off" maxlength="1" class="top right">
-        <input type="text" id="67" name="67" autocomplete="off" maxlength="1" class="top ">
-        <input type="text" id="68" name="68" autocomplete="off" maxlength="1" class="top">
-        <br>
-        <input type="text" id="70" name="70" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="71" name="71" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="72" name="72" autocomplete="off" maxlength="1" class="top left">
-        <input type="text" id="73" name="73" autocomplete="off" maxlength="1" class="top right">
-        <input type="text" id="74" name="74" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="75" name="75" autocomplete="off" maxlength="1" class="top left">
-        <input type="text" id="76" name="76" autocomplete="off" maxlength="1" class="top right">
-        <input type="text" id="77" name="77" autocomplete="off" maxlength="1" class="top ">
-        <input type="text" id="78" name="78" autocomplete="off" maxlength="1" class="top">
-        <br>
-        <input type="text" id="80" name="80" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="81" name="81" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="82" name="82" autocomplete="off" maxlength="1" class="top left">
-        <input type="text" id="83" name="83" autocomplete="off" maxlength="1" class="top right">
-        <input type="text" id="84" name="84" autocomplete="off" maxlength="1" class="top">
-        <input type="text" id="85" name="85" autocomplete="off" maxlength="1" class="top left">
-        <input type="text" id="86" name="86" autocomplete="off" maxlength="1" class="top right">
-        <input type="text" id="87" name="87" autocomplete="off" maxlength="1" class="top ">
-        <input type="text" id="88" name="88" autocomplete="off" maxlength="1" class="top">
+    <nav class="shadow-lg p-3 mb-5 bg-body head rounded navbar navbar-expand-lg navbar-light bg-light indnav">
+        <div class="container-fluid">
+            <h1 class=" navbar-brand display-1">Sudoku Solver</h1>
+            <small class="sss text-muted">-Sudoku Solving Made Simple</small>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse mr-auto navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" target="_self" href="four.html">4x4</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_self" href="nine.html">9x9</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" target="_self" href="sixteen.html">16x16</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="infodiv shadow-lg p-3 mb-5 bg-body rounded">
+        <p class="info">
+          Sudoku is a logic-based number placement puzzle.
+          In classic sudoku, the objective is to fill a 9×9 grid with digits so that each column,
+          each row, and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9.
+          The puzzle setter provides a partially completed grid, which for a well-posed puzzle has a single solution.
+          So, you can take the help of this website for filling out the remaining blocks.
+          This website helps you in solving any 4x4 or 9x9 or 16x16 sized sudoku.
         </p>
-        
-    </div>
-    <div class="buttons">
-        <button onclick="solver();" type="submit" id="submit" name="Get Sudoku!" class="button">Get Sudoku!</button>
-        <button onclick="reset();" type="reset" id="reset" name="Reset" class="button">Reset</button>
-        <p id="wrong" style="visibility:hidden">!!!Wrong input</p>
-    </div>
-</div>
-
-
-
-
-
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 </body>
