@@ -44,7 +44,13 @@ function solver(size){
     }
     if(valid){
         if(solve()){
-            fillBox(arr);
+            if(isValid()){
+                fillBox(arr);
+            }
+            else{
+                document.getElementById("wrong").style.visibility="visible";
+                reset(sz);
+            }
         }
     }
     else{
@@ -136,8 +142,8 @@ function dup_validity(row,col,no){
         return false;
     }
     function isValid(){
-        for(int i=0;i<sz;i++){
-            for(int j=0;j<sz;j++){
+        for(var i=0;i<sz;i++){
+            for(var j=0;j<sz;j++){
                 if(arr[i][j]>sz)
                     return false;
             }
@@ -150,9 +156,6 @@ function dup_validity(row,col,no){
     }
     
     function solve(){
-        if(isValid()==false){
-            return false;
-        }
         for(var row=0;row<sz;row++){
             for(var col=0;col<sz;col++){
                 if(arr[row][col]==0){
