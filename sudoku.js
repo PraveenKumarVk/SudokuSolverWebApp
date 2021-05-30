@@ -144,7 +144,7 @@ function dup_validity(row,col,no){
     function isValid(){
         for(var i=0;i<sz;i++){
             for(var j=0;j<sz;j++){
-                if(arr[i][j]>sz)
+                if(arr[i][j]>sz || arr[i][j]<1)
                     return false;
             }
         }
